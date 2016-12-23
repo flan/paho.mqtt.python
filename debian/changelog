@@ -1,4 +1,4 @@
-paho.mqtt.python (1.1.1-1) unstable; urgency=medium
+python-paho-mqtt (1.1.1) unstable; urgency=medium
 
   * Initial release 
 

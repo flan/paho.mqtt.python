@@ -1,16 +1,27 @@
-Source: paho.mqtt.python
+Source: python-paho-mqtt
 Priority: optional
 Maintainer: Martin Naughton <martin.oneachtain@gmail.com>
-Build-Depends: debhelper (>=9)
-Standards-Version: 3.9.6
-Section: libs
+Build-Depends: debhelper (>=9),
+ python (>= 2.7), python (<< 3.0), python3
+Standards-Version: 3.9.7
+Section: python
 Homepage: https://github.com/eclipse/paho.mqtt.python
-#Vcs-Git: git://anonscm.debian.org/collab-maint/paho.mqtt.python.git
+Vcs-Git: https://github.com/eclipse/paho.mqtt.python.git
 Vcs-Browser: https://github.com/eclipse/paho.mqtt.python
 
-Package: paho.mqtt.python
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Paho python client libraries
- Provides modules for subscribing and publishing to a
- mosquitto broker
+Package: python-paho-mqtt
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends},
+ python (>= 2.7), python (<< 3.0)
+Provides: ${python:Provides}
+Description: Paho Python client libraries
+ Provides modules for subscribing and publishing to an
+ MQTT broker
+
+Package: python3-paho-mqtt
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends}
+Provides: ${python:Provides}
+Description: Paho Python3 client libraries
+ Provides modules for subscribing and publishing to an
+ MQTT broker
